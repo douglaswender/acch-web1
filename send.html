@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
     <!-- Preloader -->
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="lds-ellipsis">
@@ -122,7 +123,7 @@
               <div class="col-12 col-lg-8">
                 <!-- Contact Form -->
                 <div class="contact-form-area text-center">
-                  <form action="#" method="post">
+                  <form action="" method="">
                     <input type="text" name="nome" class="form-control wow fadeInUp" data-wow-delay="100ms" placeholder="Nome">
                     <input type="email" name="email" class="form-control wow fadeInUp" data-wow-delay="300ms" placeholder="E-mail">
                     <div class="input-group wow fadeInUp" data-wow-delay="500ms">
@@ -135,12 +136,17 @@
                       </div>
                     </div>
                     <textarea name="mensagem" class="form-control wow fadeInUp" data-wow-delay="700ms" placeholder="Mensagem"></textarea>
-                    <button type="submit" class="btn pixel-btn wow fadeInUp" data-wow-delay="900ms">Enviar!</button>
+                    <button type="button" class="btn pixel-btn wow fadeInUp" data-wow-delay="900ms" onclick='
+                    bootbox.alert({
+                      message: "Seu currículo foi enviado com sucesso!!!",
+                      callback: function(){
+                        window.location.href = "index.html";
+                      }
+                    })'>Enviar!</button>
                   </form>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
     </section>
@@ -446,6 +452,8 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <!-- Bootbox js -->
+    <script type="text/javascript" src="js/bootbox.min.js"></script>
 </body>
 
 </html>
